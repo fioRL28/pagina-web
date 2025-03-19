@@ -2,11 +2,7 @@
     "rewrites": [
       {
         "source": "/contacto",
-        "destination": "/contacto/index.html"
-      },
-      {
-        "source": "/certificado",
-        "destination": "/certificado/index.html"
+        "destination": "/contacto.html"
       }
     ]
   }
