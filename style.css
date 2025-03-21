@@ -358,7 +358,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px;
+    padding: 40px;
     background-color: var(--color-secundaria); /* Fondo oscuro elegante */
     color: var(--color-cuarto);
     gap: 30px;
@@ -435,8 +435,8 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #f8f9fa; /* Color de fondo suave */
+    /*padding: 50px 20px;*/
+    background-color: #e2effc; /* Color de fondo suave */
 }
 
 /* Contenido de texto */
@@ -533,7 +533,7 @@ body{
 .clientes {
     text-align: center;
     padding: 40px 0;
-    background-color: #f8f8f8;
+    background-color: #e2effc;
     overflow: hidden;
 }
 

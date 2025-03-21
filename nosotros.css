@@ -64,15 +64,15 @@
 
 /* ======= IMÁGENES DE FONDO ======= */
 #mision {
-    background-image: url('img/fondo.png'); 
+    background-image: url('img/mision.jpeg'); 
 }
 
 #vision {
-    background-image: url('img/fondo2.png'); 
+    background-image: url('img/vision.jpg'); 
 }
 
 #valores {
-    background-image: url('img/valores.jpg'); 
+    background-image: url('img/valores.jpeg'); 
 }
 
 /* ======= LISTA DE VALORES ======= */
