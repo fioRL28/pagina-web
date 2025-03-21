@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | JEMA General Multiservices</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="servicios_ingenieria.css">
+</head>
+
+<body>
+
+    <header class="header">
+    <div class="header__top">
+        <div class="header__top__contact">
+            <span><img src="img/home.png" alt="Ubicación"> Cajamarca, Perú</span>
+            <span><img src="img/phone.png" alt="Teléfono"> (+51) 917-069702</span>
+            <span>
+                <img src="img/correo.png" alt="Correo"> 
+                <a href="mailto:jemageneralmultiservices@gmail.com">jemageneralmultiservices@gmail.com</a>
+            </span>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/JEMA-General-Services-SRL/100066804307139/?_rdr" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>        
+        
+    </div>
+
+    <nav class="nav-bar">
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo de la empresa">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="servicios.html">Servicios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="servicios_ingenieria.html">Ingeniería y Construcción</a></li>
+                        <li><a href="alquiler.html">Alquiler de Equipos</a></li>
+                        <li><a href="telecomunicaciones.html">Telecomunicaciones</a></li>
+                    </ul>
+                </li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="certificado.html" class="cta-button">Consulta de Certificados</a>
+        </div>
+    </nav>
+</header>
+
+    <main class="main">
+        <!-- Sección Hero -->
+        <main class="main">
+
+            <!-- Sección Hero -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Ingeniería y Construcción</h1>
+                    <p>Soluciones integrales en proyectos eléctricos, infraestructura y montaje de estructuras.</p>
+                    <a href="contacto.html" class="btn">Solicitar Cotización</a>
+                </div>
+            </section>
+        
+            <!-- Sección Servicios -->
+            <section class="services">
+                <h2>Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="img/ilumincaion.png" alt="Proyectos Eléctricos">
+                        <h3>Proyectos Eléctricos</h3>
+                        <p>Instalación de sistemas eléctricos en Media y Baja Tensión, incluyendo transformadores MT y puesta a tierra.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/construccion.png" alt="Infraestructura y Construcción">
+                        <h3>Infraestructura y Construcción</h3>
+                        <p>Construcción de nodos, montaje de estructuras metálicas y perforación horizontal para redes subterráneas.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/sistema-electrico.jpeg" alt="Iluminación">
+                        <h3>Iluminación</h3>
+                        <p>Diseño e instalación de alumbrado industrial y comercial para optimizar la eficiencia energética.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/capacitacion.jpg" alt="Capacitaciones y Seguridad">
+                        <h3>Capacitaciones y Seguridad</h3>
+                        <p>Formación especializada en sistemas eléctricos, seguridad industrial y normativas técnicas.</p>
+                    </div>
+                </div>
+            </section>
+            
+                    
+                    
+                </div>
+            </section>
+        
+            <!-- Llamado a la Acción -->
+            <section class="cta">
+                <h2>¿Necesitas un Proyecto de Ingeniería?</h2>
+                <p>Contáctanos y te asesoraremos en cada etapa de tu proyecto.</p>
+                <a href="contacto.html" class="btn">Contáctanos Ahora</a>
+            </section>
+        
+        </main>
+        
+
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© <span id="year"></span> JEMA General Multiservices. Todos los derechos reservados.</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
+
