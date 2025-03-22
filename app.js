@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".slider-track");
     const logos = Array.from(track.children);
@@ -76,4 +77,27 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+});*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+    const menuLinks = document.querySelectorAll(".menu a"); // Selecciona todos los enlaces del menú
+
+    // Mostrar/Ocultar menú al hacer clic en el botón de hamburguesa
+    toggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+
+    // Cerrar menú al hacer clic en cualquier enlace
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            menu.classList.remove("active"); // Cierra el menú al hacer clic en un enlace
+        });
+    });
 });
+
+
+
+
+
