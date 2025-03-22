@@ -1,11 +1,55 @@
-.hero-alquiler {
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('img/hero2.webp') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    height: 20vh;
+:root {
+    --color-uno: #000000;
+    --color-dos: #F6F6F6;
+    --color-tres: rgba(0, 0, 0, 0.1);
+    --color-cuatro: #0056b3;
+    --color-cinco: rgba(0, 0, 0, 0.5);
+    --color-seis:#555;
+    --color-siete: #e5f2ff;
+    --color-ocho:#eef6ff;
 }
+
+.main-alquiler{
+    background: linear-gradient(to bottom, #e6f0ff, #d0e3ff);
+
+}
+.hero-alquiler {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    background: linear-gradient(var(--color-cinco), var(--color-cinco)), 
+                url('img/hero2.webp') no-repeat center center/cover;
+    color: var(--color-dos);
+    padding: 14vh 5vw; 
+    box-sizing: border-box; 
+    
+}
+
+.hero-alquiler__titulo {
+    max-width: 90%; 
+    padding: 2vh 5vw 2vw; 
+    background: var(--color-cinco);
+    border-radius: 10px;
+    font-size: 2.3vw; 
+    box-sizing: border-box; 
+    text-shadow: 2px 2px 4px var(--color-cinco);
+}
+
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+.hero-alquiler__titulo__contenido {
+    margin-bottom: 0.5em; 
+    font-size: 1.8vw;
+    padding: 1em;
+    color: var(--color-siete);
+    
+}
+
+
 
 .equipos-grid {
     display: grid;
@@ -17,12 +61,14 @@
 }
 
 .equipo-card {
-    background: white;
+    background: var(--color-ocho);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
+    
+
 }
 
 .equipo-card img {
@@ -35,19 +81,20 @@
 .equipo-card h3 {
     margin: 15px 0;
     font-size: 1.5rem;
-    color: #0056b3;
+    color: var(--color-cuatro);
 }
 
-.equipo-card p {
+.equipo-card__texto{
     font-size: 1rem;
     color: #555;
+    padding: 0.5em;
 }
 
 .equipo-card .btn {
     display: inline-block;
     margin-top: 10px;
-    background: #0056b3;
-    color: white;
+    background: var(--color-cuatro);
+    color: var(--color-dos);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -55,4 +102,46 @@
 
 .equipo-card:hover {
     transform: translateY(-5px);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--color-cuatro);
+    color: var(--color-dos);
+    font-size: 1.2vw; 
+    padding: 1em 2em; 
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--color-cuatro);
+    transform: scale(1.05); 
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-alquiler {
+        height: auto; 
+        padding: 5vh 3vw;
+    }
+
+    .hero-alquiler__titulo {
+        font-size: 4vw; 
+        max-width: 95%; 
+        padding: 3vh 4vw; 
+    }
+
+    .btn {
+        font-size: 0.6rem; 
+        padding: 0.8em 1.5em; 
+    }
+
+    .hero-alquiler__titulo {
+        padding: 3vw; 
+    }
+
+    
 }

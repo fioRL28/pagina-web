@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | JEMA General Multiservices</title>
+    <title>Alquiler de equipos | JEMA General Multiservices</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="alquiler-equipos.css">
@@ -60,39 +60,84 @@
     </nav>
 </header>
 
-<main class="main alquiler">
+<main class="main-alquiler">
+
+<!-- Sección Hero -->
+
     <section class="hero-alquiler">
-        <h1>Alquiler de Equipos para tus Proyectos</h1>
-        <p>Brindamos soluciones eficientes con maquinaria y equipos de alta calidad para la construcción, ingeniería y más.</p>
-        <a href="contacto.html" class="btn">Solicitar Cotización</a>
+        <div class="hero-alquiler__titulo">
+            <h1 >Alquiler de Equipos para tus Proyectos</h1>
+            <p class="hero-alquiler__titulo__contenido">Brindamos soluciones eficientes con maquinaria y equipos de alta calidad para la construcción, ingeniería y más.</p>
+            <a href="contacto.html" class="btn">Solicitar Cotización</a>
+        </div>
+        
     </section>
 
     <section class="equipos-grid">
         <div class="equipo-card">
-            <img src="img/equipo1.jpg" alt="Nombre del equipo">
+            <img src="img/excavadora.png" alt="Excavadora">
+            <h3>Excavadora</h3>
+            <p class="equipo-card__texto">Máquina potente para excavaciones de gran profundidad y carga de materiales.</p>
+            <a href="contacto.html" class="btn">Cotizar</a>
+        </div>
+
+        <div class="equipo-card">
+            <img src="img/retroexcavadora.webp" alt="Retroexcavadora">
             <h3>Retroexcavadora</h3>
-            <p>Equipo versátil para excavaciones y movimientos de tierra.</p>
+            <p class="equipo-card__texto">Equipo versátil para excavaciones y movimientos de tierra en espacios reducidos.</p>
             <a href="contacto.html" class="btn">Cotizar</a>
         </div>
+
         <div class="equipo-card">
-            <img src="img/equipo2.jpg" alt="Nombre del equipo">
-            <h3>Generador Eléctrico</h3>
-            <p>Alta potencia y rendimiento para tus proyectos eléctricos.</p>
+            <img src="img/tractor-d6.webp" alt="Tractor D6">
+            <h3>Tractor D6</h3>
+            <p class="equipo-card__texto">Máquina de gran tracción ideal para nivelación de terrenos y empuje de materiales.</p>
             <a href="contacto.html" class="btn">Cotizar</a>
         </div>
+
         <div class="equipo-card">
-            <img src="img/equipo3.jpg" alt="Nombre del equipo">
-            <h3>Andamios</h3>
-            <p>Seguridad y estabilidad en trabajos en altura.</p>
+            <img src="img/rodillo.jpg" alt="Rodillo Compactador">
+            <h3>Rodillo Compactador</h3>
+            <p class="equipo-card__texto">Ideal para compactación de suelos y asfalto, garantizando estabilidad y durabilidad.</p>
+            <a href="contacto.html" class="btn">Cotizar</a>
+        </div>
+
+        <div class="equipo-card">
+            <img src="img/Motoniveladora.jpg" alt="Motoniveladora">
+            <h3>Motoniveladora</h3>
+            <p class="equipo-card__texto">Precisión en nivelación de suelos, construcción de carreteras y mantenimiento de vías.</p>
+            <a href="contacto.html" class="btn">Cotizar</a>
+        </div>
+
+        <div class="equipo-card">
+            <img src="img/volquete.webp" alt="Volquete">
+            <h3>Volquete</h3>
+            <p class="equipo-card__texto">Transporte eficiente de materiales como tierra, grava y escombros.</p>
+            <a href="contacto.html" class="btn">Cotizar</a>
+        </div>
+
+        <div class="equipo-card">
+            <img src="img/cisterna.webp" alt="Cisterna">
+            <h3>Cisterna</h3>
+            <p class="equipo-card__texto">Abastecimiento de agua o líquidos industriales en zonas sin suministro directo.</p>
+            <a href="contacto.html" class="btn">Cotizar</a>
+        </div>
+
+        <div class="equipo-card">
+            <img src="img/luminaria.jpg" alt="Torre de Iluminación">
+            <h3>Torre de Iluminación</h3>
+            <p class="equipo-card__texto">Iluminación potente y portátil para trabajos nocturnos o en baja visibilidad.</p>
             <a href="contacto.html" class="btn">Cotizar</a>
         </div>
     </section>
+
+    
 </main>
 
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
-        <p>© <span id="year"></span> JEMA General Multiservices. Todos los derechos reservados.</p>
+        <p class="footer__texto">© <span id="year"></span> JEMA General Multiservices. Todos los derechos reservados.</p>
         <script>
             document.getElementById("year").textContent = new Date().getFullYear();
         </script>

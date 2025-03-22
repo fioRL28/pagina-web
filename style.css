@@ -22,6 +22,7 @@ body{
     box-sizing: border-box;
     background-color: var(--color-primaria);
     color: var(--color-secundaria);
+    
 }
 
 
@@ -743,6 +744,9 @@ button:hover {
     font-family: var(--fuente-krona);
     font-weight: 400;
 }
+.footer__texto{
+    font-size: 0.6rem;
+}
 
 /* --- RESPONSIVIDAD --- */
 
@@ -754,7 +758,7 @@ button:hover {
     color: #fff;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
         position: absolute;
