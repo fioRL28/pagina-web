@@ -4,146 +4,75 @@
     --color-tres: rgba(0, 0, 0, 0.1);
     --color-cuatro: #0056b3;
     --color-cinco: rgba(0, 0, 0, 0.5);
-    --color-seis: #555;
+    --color-seis:#555;
     --color-siete: #e5f2ff;
-    --color-ocho: #eef6ff;
+    --color-ocho:#eef6ff;
+}
+
+.main-mantenimiento{
+    background: linear-gradient(to bottom, #e6f0ff, #d0e3ff);
+
 }
 
 /* Estilo del Hero */
 .hero-mantenimiento {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
     background: linear-gradient(var(--color-cinco), var(--color-cinco)), 
-                url('img/mantenimiento-hero.jpg') no-repeat center center/cover;
+                url('img/hero-manteniemiento.webp') no-repeat center center/cover;
     color: var(--color-dos);
-    padding: 14vh 5vw;
-    box-sizing: border-box;
-    height: 350px;
-    position: relative;
+    padding: 14vh 5vw; 
+    box-sizing: border-box; 
+    
 }
 
-.hero-mantenimiento::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-}
-
-.hero-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Sección de servicios */
-.mantenimiento {
-    padding: 60px 20px;
-    background: linear-gradient(to bottom, var(--color-siete), var(--color-ocho));
-    text-align: center;
-}
-
-.mantenimiento h1 {
-    font-size: 2.5rem;
-    color: var(--color-cuatro);
-    margin-bottom: 20px;
-}
-
-.mantenimiento p {
-    font-size: 1.2rem;
-    color: var(--color-seis);
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
-
-/* Grid de servicios */
-.mantenimiento__servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 20px;
-}
-
-/* Tarjetas de servicio */
-.servicio {
-    background: var(--color-ocho);
-    padding: 20px;
+.hero-mantenimiento__titulo {
+    max-width: 90%; 
+    padding: 2vh 5vw 2vw; 
+    background: var(--color-cinco);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s;
+    font-size: 2.3vw; 
+    box-sizing: border-box; 
+    text-shadow: 2px 2px 4px var(--color-cinco);
 }
 
-.servicio:hover {
-    transform: translateY(-5px);
+
+.hero-mantenimiento__titulo__contenido {
+    margin-bottom: 0.5em; 
+    font-size: 1.8vw;
+    padding: 1em;
+    color: var(--color-siete);
+    
 }
 
-.servicio img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 15px;
-}
 
-.servicio h3 {
-    font-size: 1.4rem;
-    color: var(--color-cuatro);
-    margin-bottom: 10px;
-}
 
-/* Botón de contacto */
-.mantenimiento__contacto {
-    margin-top: 30px;
-}
 
-.cta-button {
-    display: inline-block;
-    background: var(--color-cuatro);
-    color: var(--color-dos);
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
 
-.cta-button:hover {
-    background: #003f7f;
-}
 
-/* Responsive */
+
 @media (max-width: 768px) {
-    .hero-mantenimiento {
-        height: 250px;
+    .hero-alquiler {
+        height: auto; 
+        padding: 5vh 3vw;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    .hero-alquiler__titulo {
+        font-size: 4vw; 
+        max-width: 95%; 
+        padding: 3vh 4vw; 
     }
 
-    .hero-content p {
-        font-size: 1rem;
+    .btn {
+        font-size: 0.6rem; 
+        padding: 0.8em 1.5em; 
     }
 
-    .mantenimiento__servicios {
-        grid-template-columns: 1fr;
+    .hero-alquiler__titulo {
+        padding: 3vw; 
     }
 
-    .cta-button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
+    
 }
