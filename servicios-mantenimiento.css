@@ -13,8 +13,6 @@
     background: linear-gradient(to bottom, #e6f0ff, #d0e3ff);
 
 }
-
-/* Estilo del Hero */
 .hero-mantenimiento {
     display: flex;
     align-items: center; 
@@ -39,6 +37,10 @@
 }
 
 
+h1 {
+    margin-bottom: 0.5em;
+}
+
 .hero-mantenimiento__titulo__contenido {
     margin-bottom: 0.5em; 
     font-size: 1.8vw;
@@ -47,19 +49,27 @@
     
 }
 
+.equipo-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
 
-
-
-
-
+.equipos-grid {
+    gap: 80px;
+    max-width: 80%;
+    margin: auto;
+    padding: 5vh 3vw;
+}
 
 @media (max-width: 768px) {
-    .hero-alquiler {
+    .hero-mantenimiento {
         height: auto; 
         padding: 5vh 3vw;
     }
 
-    .hero-alquiler__titulo {
+    .hero-mantenimiento__titulo {
         font-size: 4vw; 
         max-width: 95%; 
         padding: 3vh 4vw; 
@@ -70,7 +80,7 @@
         padding: 0.8em 1.5em; 
     }
 
-    .hero-alquiler__titulo {
+    .hero-mantenimiento__titulo {
         padding: 3vw; 
     }
 
