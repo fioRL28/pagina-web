@@ -842,6 +842,13 @@ button:hover {
     }
     
     /*******************************/
+
+    .whatsapp-icon img {
+        width: 10vw; /* 10% del ancho de la ventana */
+        height: auto;
+        border-radius: 1vw; /* Redondeo proporcional al ancho de la ventana */
+        transition: transform 0.3s ease;
+    }
     
 }
 
