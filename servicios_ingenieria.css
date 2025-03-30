@@ -1,124 +1,136 @@
-/* --- Sección Hero --- */
+:root {
+    --color-uno: #000000;
+    --color-dos: #F6F6F6;
+    --color-tres: rgba(0, 0, 0, 0.1);
+    --color-cuatro: #0056b3;
+    --color-cinco: rgba(0, 0, 0, 0.5);
+    --color-seis:#555;
+    --color-siete: #e5f2ff;
+    --color-ocho:#eef6ff;
+}
 
+.main-alquiler{
+    background: linear-gradient(to bottom, #e6f0ff, #d0e3ff);
+
+}
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('img/hero.png') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    background: linear-gradient(var(--color-cinco), var(--color-cinco)), 
+                url('img/hero.png') no-repeat center center/cover;
+    color: var(--color-dos);
+    padding: 14vh 5vw; 
+    box-sizing: border-box; 
+    
+}
+
+.hero__titulo {
+    max-width: 90%; 
+    padding: 2vh 5vw 2vw; 
+    background: var(--color-cinco);
+    border-radius: 10px;
+    font-size: 2.3vw; 
+    box-sizing: border-box; 
+    text-shadow: 2px 2px 4px var(--color-cinco);
+}
+
+
+h1 {
+    margin-bottom: 0.5em;
+    
+}
+.services__contenido{
+    font-size: 2rem;
+    margin: 1rem;
+    color: var(--color-cuatro);
+    text-align: center;
+}
+
+.hero__titulo__contenido {
+    margin-bottom: 0.5em; 
+    font-size: 1.8vw;
+    padding: 1em;
+    color: var(--color-siete);
+    
+}
+
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    gap: 22px;
+    max-width: 100%;
+    margin: auto;
+    padding: 5vh 3vw;
+}
+
+.service-card {
+    background: var(--color-ocho);
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    
+
 }
 
-.hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-    animation: fadeInUp 1s ease-in-out;
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    color: var(--color-seis);
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+.service-card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: var(--color-cuatro);
 }
 
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-    line-height: 1.5;
+.service-card p{
+    font-size: 1rem;
+    color: #555;
+    padding: 0.5em;
+}
+
+.services-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--color-cuatro);
+    color: var(--color-dos);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.services-card:hover {
+    transform: translateY(-5px);
 }
 
 .btn {
-    background: #007bff;
-    color: white;
-    padding: 14px 30px;
-    text-decoration: none;
+    display: inline-block;
+    background: var(--color-cuatro);
+    color: var(--color-dos);
+    font-size: 1.2vw; 
+    padding: 1em 2em; 
     border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-}
-
-/* Animación para el hero */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* --- Sección Servicios --- */
-.services {
-    text-align: center;
-    padding: 60px 20px;
-    background: #f9f9f9;
-}
-
-.services h2 {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Diseño de la cuadrícula */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Tarjetas de Servicios */
-.service-card {
-    background: white;
-    padding: 22px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    text-align: center;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Imágenes dentro de las tarjetas */
-.service-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-}
-
-/* Títulos y textos */
-.service-card h3 {
-    margin: 18px 0;
-    font-size: 1.6rem;
-    color: #0056b3;
-}
-
-.service-card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
+    background: var(--color-cuatro);
+    transform: scale(1.05); 
 }
 
 /* --- Sección CTA --- */
 .cta {
-    background: #0056b3;
+    background: #114781;
     color: white;
     text-align: center;
     padding: 60px 20px;
@@ -146,29 +158,25 @@
     background: #e0e0e0;
 }
 
-/* --- Responsividad --- */
+
 @media (max-width: 768px) {
     .hero {
-        padding: 80px 15px;
+        height: auto; 
+        padding: 5vh 3vw;
     }
 
-    .hero h1 {
-        font-size: 2.2rem;
+    .hero__titulo {
+        font-size: 4vw; 
+        max-width: 95%; 
+        padding: 3vh 4vw; 
     }
 
-    .hero p {
-        font-size: 1.1rem;
+    .btn {
+        font-size: 0.6rem; 
+        padding: 0.8em 1.5em; 
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+    
 
-    .cta h2 {
-        font-size: 2rem;
-    }
-
-    .cta p {
-        font-size: 1.1rem;
-    }
+    
 }

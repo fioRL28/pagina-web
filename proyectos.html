@@ -1,69 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | JEMA General Multiservices</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <header class="header">
-    <div class="header__top">
-        <div class="header__top__contact">
-            <span><img src="img/home.png" alt="Ubicación"> Cajamarca, Perú</span>
-            <span><img src="img/phone.png" alt="Teléfono"> (+51) 917-069702</span>
-            <span>
-                <img src="img/correo.png" alt="Correo"> 
-                <a href="mailto:jemageneralmultiservices@gmail.com">jemageneralmultiservices@gmail.com</a>
-            </span>
-        </div>
-
-        <div class="social-icons">
-            <a href="https://www.facebook.com/people/JEMA-General-Services-SRL/100066804307139/?_rdr" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="#" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página Principal | JEMA General Multiservices</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="proyectos.css">
+    
+    
         
-    </div>
-
-    <nav class="nav-bar">
-        <div class="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo de la empresa">
+    </head>
+    
+    <body>
+    
+        <header class="header">
+        <div class="header__top">
+            <div class="header__top__contact">
+                <span><img src="img/home.png" alt="Ubicación"> Cajamarca, Perú</span>
+                <span><img src="img/phone.png" alt="Teléfono"> (+51) 917-069702</span>
+                <span>
+                    <img src="img/correo.png" alt="Correo"> 
+                    <a href="mailto:jemageneralmultiservices@gmail.com">jemageneralmultiservices@gmail.com</a>
+                </span>
             </div>
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li class="dropdown">
-                    <a href="">Servicios</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="servicios_ingenieria.html">Sistemas Eléctricos</a></li>
-                        <li><a href="servicios-mantenimiento.html">Mantenimiento y Servicios Generales</a></li>
-                        <li><a href="alquiler-equipos.html">Alquiler de Equipos</a></li>                           
-                    </ul>
-                </li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <a href="certificado.html" class="cta-button">Consulta de Certificados</a>
+    
+            <div class="header__top__social">
+                <a href="https://www.facebook.com/people/JEMA-General-Services-SRL/100066804307139/?_rdr" target="_blank">
+                    <img src="img/Facebook-f_Logo-Blue-Log.svg" alt="Facebook">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="img/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>        
+            
         </div>
-    </nav>
-</header>
-
-    <main class="main">
-
+    
+        <nav class="nav-bar">
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo de la empresa" loading="lazy">
+                </div>
+                <ul class="menu">
+                    
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="servicios.html">Servicios</a>
+                        <ul class="dropdown-enu">
+                            <li class="dropdown-enu__texto"><a href="servicios_ingenieria.html">Sistemas Eléctricos</a></li>
+                            <li class="dropdown-enu__texto"><a href="servicios-mantenimiento.html">Mantenimiento y Servicios Generales</a></li>
+                            <li class="dropdown-enu__texto"><a href="alquiler-equipos.html">Alquiler de Equipos</a></li>                         
+                        </ul>
+                    </li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li class="certificado-item">
+                        <a href="validar-certificado.html" class="ctag-button">Consulta de Certificados</a>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <a href="validar-certificado.html" class="cta-button">Consulta de Certificados</a>
+            </div>
+        </nav>
         
+    </header>
 
+    <!-- HERO -->
 
+    <section class="hero-proyectos">
+        <div class="hero-proyectos__titulo">
+            <h1>Nuestros Proyectos</h1>
+            <p class="hero-proyectos__titulo__contenido">Comprometidos con la excelencia en cada obra, garantizando calidad, seguridad e innovación en el sector.</p>
+            <a href="contacto.html" class="btn">Solicitar Cotización</a>
+        </div>
+    </section>
+
+    <main class="main-proyectos">
+        <section class="proyectos-lista">
+            <h2>Proyectos Destacados</h2>
+            <div class="grid-proyectos">
+                <div class="proyecto">
+                    <img src="img/proyecto1.jpg" alt="Proyecto 1">
+                    <h3>Instalación de Infraestructura Eléctrica</h3>
+                    <p>Realizamos la instalación de sistemas eléctricos de media y baja tensión para una empresa industrial.</p>
+                    <span>Fecha: Marzo 2024</span>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/proyecto2.jpg" alt="Proyecto 2">
+                    <h3>Mantenimiento de Redes de Telecomunicaciones</h3>
+                    <p>Implementación y mantenimiento de redes de telecomunicaciones en zonas rurales.</p>
+                    <span>Fecha: Enero 2024</span>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/proyecto3.jpg" alt="Proyecto 3">
+                    <h3>Construcción de Pozos a Tierra</h3>
+                    <p>Diseño y construcción de pozos a tierra para garantizar la seguridad eléctrica en edificaciones comerciales.</p>
+                    <span>Fecha: Febrero 2024</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="proyectos-contacto">
+            <a href="contacto.html" class="cta-button">Solicitar más información</a>
+        </div>
     </main>
 
     <!-- PIE DE PÁGINA -->
@@ -74,8 +120,6 @@
         </script>
     </footer>
 
-    
     <script src="app.js"></script>
 </body>
-
 </html>

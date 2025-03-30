@@ -1,69 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
-
-
-:root {
-    --color-primaria: #000000;
-    --color-secundaria: #F6F6F6;
-    --color-terciaria: #0353A4;
-    --color-cuarto: #054484;
-    --color-hover: #656464;
-
-    --fuente-krona: 'Krona One', sans-serif;
-    --fuente-montserrat: 'Montserrat', sans-serif;
-    --fuente-Arial:'Arial'
-}
-
 * {
     padding: 0;
     margin:0;
-}
-
-body{
-    box-sizing: border-box;
-    background-color: var(--color-primaria);
-    color: var(--color-secundaria);
     
 }
 
 
-/* ----- HEADER SUPERIOR ----- */
-.header {
-    background-color: var(--color-terciaria);
+:root {
+
+    --color-principal:#0353A4;
+    --color-secundario:#F6F6F6;
+    --color-terciario:#656464;
+    --color-fodo:#e5f2ff;
+    --color-letra:#313030;
+
+
+
+
+    --color-primaria: #000000;
+    
+    --color-cuarto: #054484;
+    --color-hover: #656464;
+    --color-tres: rgba(0, 0, 0, 0.1);
+    --color-cuatro: #0056b3;
+    --color-cinco: rgba(0, 0, 0, 0.5);
+    --color-seis:#313030;
+    --color-siete: #e5f2ff;
+    --color-ocho:#eef6ff;
+}
+
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-fodo);
     color: var(--color-secundaria);
-    font-family: var(--fuente-Arial);
+    /*font-family: "Times New Roman", Times, serif !important*/
+    
+}
+
+
+/**********************************************HEADER******************************************************************/
+
+.header {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
 }
 
 /* Barra superior */
 .header__top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuye los elementos */
     align-items: center;
-    max-width: 90vw; 
+    max-width: 90%; 
     margin: 0 auto;
     padding: 0.8em 1.5em; 
     flex-wrap: wrap;
 }
 
-
-/* Información de contacto */
 .header__top__contact {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    /*margin-left: 400px;*/
-    margin-left: 22vw;
-    font-size: 14px;
+    gap: 2em;
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: center;
 }
 
 
 .header__top__contact img {
     width: 18px;
-    
 }
 
 .header__top__contact a {
-    color: var(--color-secundaria);
+    color: var(--color-secundario);
     text-decoration: none;
 }
 
@@ -71,71 +79,22 @@ body{
     text-decoration: underline;
 }
 
-/* Redes sociales */
-.social-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    
+.header__top__social a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
 }
 
-/* Íconos sin fondo y con color original */
-.social-icons i {
-    font-size: 32px; /* Ajusta el tamaño */
-    color: inherit; /* Usa su color original */
+.header__top__social a:hover img {
+    transform: scale(1.1);
 }
 
-/* Colores exactos de cada red social */
-/* Redes sociales */
-.social-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* Contenedor de redes sociales */
-.social-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* Iconos con fondo blanco y color original */
-.social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px; /* Tamaño del icono */
-    height: 20px;
-    background-color: white; /* Fondo blanco */
-    border-radius: 50%; /* Hace que los iconos sean redondos */
-    text-decoration: none;
-}
-
-/* Estilos para los iconos de FontAwesome */
-.social-icons i {
-    font-size: 24px; /* Tamaño de la letra dentro del icono */
-    color: #1877F2; /* Azul original de Facebook */
-}
-
-/* Color específico para LinkedIn */
-.social-icons .fa-linkedin {
-    color: #0A66C2; /* Azul original de LinkedIn */
-}
-
-/* Efecto al pasar el cursor */
-.social-icons a:hover {
-    background-color: #E5E5E5; /* Un gris suave al pasar el mouse */
-}
-
-
-
-
-
+/*-------------------------------------------------------------------------------------------*/
 
 /* ----- BARRA DE NAVEGACIÓN ----- */
 .nav-bar {
-    background-color: var(--color-secundaria);
+    position: relative;
+    background-color: var(--color-secundario);
     box-shadow: 0px 4px 6px rgba(94, 83, 83, 0.1);
     padding: 12px 0;
     text-transform: uppercase;
@@ -154,7 +113,6 @@ body{
 /* Logo */
 .logo img {
     height: 60px;
-    max-width: 100%;
     
 }
 
@@ -175,12 +133,14 @@ body{
 }
 
 .menu a:hover {
-    color: var(--color-terciaria);
+    color: var(--color-principal);
 }
+
+
 
 /* Botón CTA */
 .cta-button {
-    background-color: var(--color-terciaria);
+    background-color: var(--color-principal);
     color: var(--color-secundaria);
     padding: 10px 15px;
     font-weight: bold;
@@ -191,51 +151,61 @@ body{
 }
 
 .cta-button:hover {
-    background-color: var(--color-hover);
+    background-color: var(--color-terciario);
 }
 
-/* ----- SUBMENÚ ----- */
-.dropdown {
-    position: relative;
-}
 
-.dropdown-menu {
+.menu-toggle {
     display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(138, 135, 135);
     position: absolute;
-    background-color: #ffffff;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 101; /* Asegura que esté sobre el contenido */
+}
+
+
+
+/* Oculta el submenú por defecto en responsive */
+.dropdown-enu {
+    display: none;
+    position: absolute;/**/
+    background: var(--color-secundario) ; /* 🔹 Asegura el color negro */
+    position: absolute;
+    padding: 10px 0;
     list-style: none;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    top: 100%;
-    left: 0;
+    z-index: 9999;
+    text-transform: none;
+    
 }
 
-.dropdown:hover .dropdown-menu {
+
+/* Muestra el submenú cuando la clase "show" está activa */
+.dropdown-enu.show {
     display: block;
 }
 
-.dropdown-menu li {
-    padding: 5px 0;
+/* Cuando el dropdown está activo (mostrar el menú) */
+.dropdown:hover .dropdown-enu {
+    display: block;
 }
 
-.dropdown-menu a {
-    color: #000;
+/* Estilos para los enlaces dentro del menú */
+.dropdown-enu__texto a {
+    color: var(--color-primaria); /* Cambia el color del texto */
+    text-decoration: none;
+    display: block;
     padding: 5px 10px;
-    display: block;
     transition: background 0.3s;
 }
 
-.dropdown-menu a:hover {
-    background-color: #f0f0f0;
-}
-.dropdown-menu.show {
-    display: block;
+/* Color al pasar el mouse */
+.dropdown-enu__texto a:hover {
+    background-color: rgb(184, 181, 181) ;
 }
 
-
-/* ================= SECCIÓN HERO ================= */
-/* Estilos generales de la sección Hero */
 .hero {
     
     /*width: 100%;*/
@@ -282,21 +252,7 @@ body{
     border-radius: 10px;
 }
 
-/* 🎯 Botón */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #ff6f00;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
 
-.btn:hover {
-    background: #e65c00;
-}
 
 /* Título llamativo */
 .hero-title {
@@ -347,222 +303,193 @@ body{
 }
 
 
+/**************** NOSOTROS*************/
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .hero-title { font-size: 2.5rem; }
-    .hero-slogan { font-size: 1.5rem; }
-    .hero-text { font-size: 1rem; }
-    .btn { font-size: 1rem; padding: 10px 20px; }
-}
-
-
-/* ================= SECCIÓN SOBRE NOSOTROS ================= */
 .about {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
-    background-color: var(--color-secundaria); /* Fondo oscuro elegante */
-    color: var(--color-cuarto);
-    gap: 30px;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: var(--color-fodo);
 }
-
-.about-content {
-    width: 50%;
-    text-align: left;
-}
-
-.about h2 {
-    font-size: 2.5rem;
-    color: var(--color-cuarto); /* Color resaltante */
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1rem;
-    color: white;
-    background: #f8b400;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #d89a00;
-}
-
 .about-image {
     width: 50%;
 }
 
 .about-image img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(255, 254, 254, 0.816);
+    box-shadow: 0px 5px 15px var(--color-terciario);
+    transition: transform 0.3s ease-in-out;
 }
 
-
-@media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px;
-    }
-
-    .about-content, .about-image {
-        width: 100%;
-    }
-
-    .about h2 {
-        font-size: 2rem;
-    }
-
-    .about-image img {
-        max-width: 80%;
-    }
+.about-image img:hover {
+    transform: scale(1.05);
 }
 
-/* ================= SECCIÓN SERVICIOS ================= */
-/* Estilos generales para la sección */
-#servicios {
+.about-content {
+    width: 50%;
+    flex-direction: column;
+    align-items: center; /* Centra el título y el botón horizontalmente */
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-principal);
+}
+
+.about-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--color-secundaria);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-hover);
+}
+
+/********************** SECCIÓN SERVICIOS *****************************************/
+.servicios {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*padding: 50px 20px;*/
+    padding: 50px 20px;
     background-color: #e2effc; /* Color de fondo suave */
+    font-family: inherit; /* Usa la fuente original del sitio */
+    gap: 7%;
 }
 
 /* Contenido de texto */
-#servicios .contenido {
+.servicios .contenido {
     flex: 1 1 400px;
     max-width: 600px;
     padding: 20px;
+    font-family: inherit; /* Mantiene la tipografía original */
 }
 
-#servicios h2 {
+.servicios h2 {
     font-size: 2rem;
-    color: #0056b3;
+    color: var(--color-principal);
     margin-bottom: 15px;
+
 }
 
-#servicios p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 20px;
+.servicios p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--color-secundaria);
+    text-align: justify;
+    padding: 0 0 1.5rem;
 }
 
 /* Lista de servicios */
-#servicios ul {
+.servicios ul {
     list-style: none;
     padding: 0;
 }
 
-/* Ocultar lista en pantallas pequeñas */
-@media (max-width: 768px) {
-    #servicios ul {
-        display: none; /* 🔹 Oculta la lista en móviles */
-    }
+.servicios li {
+    font-size: 1.1rem;
+    color: var(--color-principal);
+    margin-bottom: 1.2rem;
+    text-align: left;
 }
 
 /* Botón */
-#servicios .btn {
+.servicios .btn {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
     background-color: #007bff;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: background 0.3s ease-in-out;
+    font-size: inherit;
+    font-family: inherit;
 }
 
-#servicios .btn:hover {
+.servicios .btn:hover {
     background-color: #0056b3;
 }
 
-/* Carrusel */
-.imagen-destacada {
-    flex: 1 1 500px;
-    max-width: 600px;
-    margin: 20px;
+.carrusel {
+    flex: 1;
+    max-width: 40%;
 }
 
-/* Ajuste del tamaño de imágenes dentro del carrusel */
-.carousel-inner img {
+.swiper {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 300px;
 }
 
-/* Controles del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
-
-/* Responsividad */
-@media (max-width: 768px) {
-    #servicios {
-        flex-direction: column;
-    }
-    #servicios .contenido, .imagen-destacada {
-        max-width: 100%;
-    }
-
-    /* 🔹 Mostrar carrusel después del párrafo */
-    .imagen-destacada {
-        order: 2; /* Mueve el carrusel debajo del párrafo */
-    }
-
-    #servicios p {
-        order: 1; /* Mantiene el párrafo arriba */
-    }
-}
-
 
 
 /**--------------------------------*/
 .clientes {
     text-align: center;
     padding: 40px 0;
-    background-color: #e2effc;
+    background-color: #e8f1f9;
     overflow: hidden;
+}
+.clientes__texto{
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin-bottom: 40px;
 }
 
 .slider {
+    overflow: hidden;
     position: relative;
     width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
 .slider-track {
     display: flex;
-    align-items: center;
-    gap: 30px;
-    transition: transform 0.1s linear;
+    width: calc(15vw * 11 * 2); /* Tamaño dinámico según el ancho de la pantalla */
+    animation: scroll 20s linear infinite;
 }
 
 .slider-track img {
-    height: 100px; /* Tamaño de los logos */
-    width: auto;
+    width: 15vw; /* 15% del ancho de la pantalla */
+    max-width: 250px; /* Límite máximo para pantallas grandes */
+    min-width: 100px; /* Límite mínimo para pantallas pequeñas */
+    padding: 0 1vw;
     object-fit: contain;
 }
 
-
-
+/* Animación */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
 /* ================= SECCIÓN CONTACTO ================= */
 .contacto {
@@ -661,8 +588,10 @@ button:hover {
     background-color: #1e3f6b;
 }
 
-/**************************/
 
+
+
+/*****************/
 /*mapa*/
 .mapa {
     max-width: 1400px;
@@ -675,61 +604,19 @@ button:hover {
     margin-left: 10%;
 }
 
-.redes-sociales a {
-    margin: 10px;
-    color: #333; /* Color oscuro por defecto */
-    text-decoration: none;
-}
-
-.redes-sociales a:hover {
-    color: #007bff; /* Cambia de color al pasar el mouse */
+.mapa h2{
+    font-size: 2rem;
+    text-align: center;
 }
 
 
 
 
-/* Estilos para el menú desplegable */
-.dropdown {
-    position: relative;
-}
 
-.dropdown-menu {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    min-width: 200px;
-    display: none;
-    z-index: 1000;
-}
 
-.dropdown-menu li {
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
 
-.dropdown-menu li:last-child {
-    border-bottom: none;
-}
 
-.dropdown-menu a {
-    display: block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-}
 
-.dropdown-menu a:hover {
-    background-color: #f0f0f0;
-}
-
-/* Mostrar el submenú cuando se pasa el mouse */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
 
 
 
@@ -737,7 +624,7 @@ button:hover {
 
 
 .footer {
-    background-color: var(--color-terciaria);
+    background-color: var(--color-principal);
     color: white;
     text-align: center;
     padding: 20px;
@@ -746,34 +633,29 @@ button:hover {
     font-weight: 400;
 }
 .footer__texto{
-    font-size: 0.6rem;
-}
-
-/* --- RESPONSIVIDAD --- */
-
-
-
-@media screen and (max-width: 768px) {
-    
-
-    
+    font-size: 1rem;
 }
 
 
+.whatsapp-icon {
+    position: fixed;
+    bottom: 10vh; /* 10% de la altura de la ventana */
+    right: 3vw;  /* 3% del ancho de la ventana */
+    z-index: 9999;
+}
+
+.whatsapp-icon img {
+    width: 6vw; /* 10% del ancho de la ventana */
+    height: auto;
+    border-radius: 1vw; /* Redondeo proporcional al ancho de la ventana */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
 
 
-/*---------------------------------------------------------------------------------------------------------*/
-    /* Estilos del botón de menú */
-    .menu-toggle {
-        display: none;
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: white;
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-        z-index: 101; /* Asegura que esté sobre el contenido */
-    }
 
 
 
@@ -795,6 +677,9 @@ button:hover {
         justify-content: center;
         align-items: center;
     }
+    .header__top__social {
+        display: none; /* 🔹 Oculta las redes sociales en móviles */
+    }
 
     .header__top__contact span {
         display: none; /* Oculta todos los elementos */
@@ -805,9 +690,6 @@ button:hover {
         align-items: center;
     }
 
-    .header__top__contact span:nth-child(2) img { 
-        display: none; /* Oculta el icono del celular */
-    }
 
     .social-icons {
         display: none; /* Oculta los iconos de redes sociales */
@@ -838,17 +720,14 @@ button:hover {
         padding: 20px;
     }
 
-    .menu.active {
-        display: flex;
-    }
+    
 
     .menu li {
         margin: 15px 0;
     }
 
     .cta-button {
-        display: none; /* Opcional: Oculta el botón en móvil */
-    }
+        display: none;}
 
 
     .menu-toggle {
@@ -861,7 +740,7 @@ button:hover {
         left: 0; /* Ahora el menú está a la izquierda */
         width: 50vw; /* Ocupa la mitad de la pantalla */
         height: 100vh;
-        background: rgba(40, 40, 40, 0.95); /* Fondo oscuro */
+        background: rgb(161, 160, 160); /* Fondo oscuro */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -871,7 +750,6 @@ button:hover {
         transform: translateX(-100%); /* Oculto fuera de la pantalla en la izquierda */
         transition: transform 0.3s ease-in-out;
     }
-
     .menu.active {
         transform: translateX(0); /* Aparece desde la izquierda */
     }
@@ -881,11 +759,90 @@ button:hover {
     }
 
     .menu li a {
-        color: white;
+        color: var(--color-letra);
         text-decoration: none;
         font-size: clamp(1rem, 2.5vw, 1.4rem);
         font-weight: bold;
     }
+
+    .dropdown-enu {
+        background: rgb(172, 172, 172);
+        width: 100%;
+        left: 0;
+        text-align: center;
+        text-transform: none;
+        
+    }
+    
+
+    .menu a:hover {
+        color: var(--color-principal);
+    }
+
+
+    .ctag-desktop {
+        display: none;
+    }
+
+    .certificado-item {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /*********************/
+
+    
+    .hero-title { font-size: 2.5rem; }
+    .hero-slogan { font-size: 1.5rem; }
+    .hero-text { font-size: 1rem; }
+    .btn { font-size: 1rem; padding: 10px 20px;}
+
+
+    /************************/
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .about-content, .about-image {
+        width: 100%;
+    }
+
+    .about-content p{
+        font-size: 1.2rem;
+    }
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about-image img {
+        max-width: 80%;
+    }
+
+
+    /******************************************/
+    .servicios p{
+        font-size: 1.2rem;
+    }
+    
+    /*******************************************************/
+    .contacto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .campo {
+        width: 100%;
+    }
+    
+    /*******************************/
+    
 }
 
 
@@ -897,12 +854,12 @@ button:hover {
 
 
 
+
+
+
+
+
+
+
+
     
-
-
-
-
-
-
-
-
