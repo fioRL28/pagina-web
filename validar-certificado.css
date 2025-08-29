@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 50px;
@@ -31,5 +31,159 @@ th, td {
 }
 th {
     background-color: #f2f2f2;
+}*/
+
+/* ======= RESET GENERAL ======= */
+* {
+  box-sizing: border-box;
+ 
+  padding: 0;
+}
+
+body {
+  
+  background-color: #f4f7fb;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ======= CONTENEDOR PRINCIPAL ======= */
+.card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e0e6ed;
+}
+
+.texto{
+    text-align: center;
+}
+
+.boton{
+    text-align: center;
+}
+/* ======= TÍTULO ======= */
+.card h2 {
+  font-size: 2rem;
+  color: #023e7d;
+  margin-bottom: 20px;
+}
+
+/* ======= INPUT Y BOTÓN ======= */
+input[type="text"] {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  width: 50%;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  border-color: #0353A4;
+  outline: none;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #0353A4;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #023e7d;
+}
+
+/* ======= MENSAJES ======= */
+.mensaje {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.valido {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.no-valido {
+  color: #c62828;
+  font-weight: 600;
+  
+}
+
+.cuadro{
+    text-align: center;
+}
+
+/* ======= TABLA DE RESULTADOS ======= */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+th {
+  background-color: #eaf2f8;
+  color: #0353A4;
+  font-weight: 600;
+}
+
+td {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.volver {
+ display: inline-block;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #0353A4;
+  text-decoration: none;
+  border: 1px solid #0353A4;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left;
+
+  
+}
+
+
+.volver:hover {
+  background-color: #0353A4;
+  color: #ffffff;
+}
+
+/* ======= RESPONSIVO ======= */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
 }
 

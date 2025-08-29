@@ -3,49 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="validar-certificado.css">
+    <a href="index.html" class="volver">← Volver al inicio</a>
     <title>Validar Certificado</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        input, button {
-            padding: 10px;
-            font-size: 16px;
-        }
-        .mensaje {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-        .valido {
-            color: green;
-            font-weight: bold;
-        }
-        .no-valido {
-            color: red;
-            font-weight: bold;
-        }
-        table {
-            width: 60%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    
 </head>
 <body>
 
-    <h2>Validar Certificado</h2>
+    <div class="cuadro">
+        <h2 class="texto">Validar Certificado</h2>
     <input type="text" id="codigo" placeholder="Ingrese el DNI">
-    <button onclick="validarCertificado()">Validar</button>
+    </div>
+    
+    <div class="boton">
+        <button onclick="validarCertificado()">Validar</button>
+    </div>
+    
 
     <div id="resultado" class="mensaje"></div>
 
