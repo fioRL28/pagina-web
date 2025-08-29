@@ -133,16 +133,16 @@ h1 {
     background: #114781;
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
 .cta h2 {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .cta p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 25px;
     line-height: 1.6;
 }
@@ -150,7 +150,7 @@ h1 {
 .cta .btn {
     background: white;
     color: #0056b3;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 8px;
 }
 
