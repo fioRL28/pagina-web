@@ -25,7 +25,6 @@
     color: var(--color-dos);
     padding: 14vh 5vw;
     box-sizing: border-box;
-    height: 350px;
     position: relative;
     height: 75vh;
 }
@@ -35,7 +34,7 @@
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(34, 32, 32, 0.5);
+    background: rgba(41, 38, 38, 0.5);
     z-index: 1;
 }
 
@@ -61,7 +60,7 @@
     color: var(--color-dos);
 }
 
-.proyectos-lista2{
+.proyectos-lista2 {
     text-align: center;
     margin-top: 4.5%;
     color: #043f7e;
@@ -69,20 +68,20 @@
     font-weight: bold;
 }
 
-/* Botón de cotización en el hero */
-.hero-proyectos__titulo .btn {
+/* BOTONES */
+.btn {
     display: inline-block;
     background: var(--color-cuatro);
     color: var(--color-dos);
-    font-size: 1.2vw;
-    padding: 1em 2em;
+    font-size: 1.2vw; 
+    padding: 1em 2em; 
     border-radius: 8px;
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
 
 .hero-proyectos__titulo .btn:hover {
-    background: var(--color-cuatro)
+    background: #003f7f;
 }
 
 /* GRID DE PROYECTOS */
@@ -153,14 +152,22 @@
 }
 
 .cta-button:hover {
-    background: #525457;
-     
+    background: var(--color-tres);
+    
 }
 
+/* ------------------------- */
+/* CERTIFICADOS RESPONSIVE   */
+/* ------------------------- */
 
+/* En escritorio (≥769px) se oculta el submenu de certificados */
+@media (min-width: 769px) {
+    .certificado-submenu {
+        display: none !important;
+    }
+}
 
-
-/* RESPONSIVE */
+/* En móvil (≤768px) se oculta el botón suelto */
 @media (max-width: 768px) {
     .hero-proyectos {
         height: auto;
@@ -178,7 +185,11 @@
     }
 
     .cta-button {
+        display: none !important; /* ocultar botón suelto */
+    }
+
+    .btn {
         font-size: 0.6rem; 
-        padding: 0.8em 1.5em;
+        padding: 0.8em 1.5em; 
     }
 }
